@@ -727,3 +727,11 @@ html.fundo-noite .rodape a, html.fundo-noite .rodape .cvv { color: var(--creme);
 .mapa .janela--trancada .borrao { filter: blur(7px); user-select: none; -webkit-user-select: none; }
 .mapa .janela--trancada small { display: block; margin-top: 4px; font-size: 13.5px; color: var(--creme); opacity: .85; }
 .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Logo do produto (22/11): no título da oferta e no topo da página de obrigado */
+.oferta-logo img { display: block; width: 210px; max-width: 62%; height: auto; margin: 0 auto; border-radius: 22px; }
+.obrigado .obrigado-logo { display: block; width: 150px; max-width: 46%; height: auto; margin: 0 auto 18px; border-radius: 18px; }
+
+/* Imagem carregada: some o fundo e o nome do arquivo do placeholder (igual ao Prato Ponte; o onerror remove o <img> e o placeholder volta) */
+.midia--contain:has(> img) { background: none; }
+.midia:has(> img)::after { content: none; }
