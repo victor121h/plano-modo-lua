@@ -9,7 +9,7 @@
 window.CONFIG = {
   // Meta (Facebook): Gerenciador de Eventos > fonte de dados do MODO LUA > ID do pixel (só números).
   // Use um pixel próprio do Modo Lua, separado dos outros produtos.
-  PIXEL_ID: "28165559309792835", // pixel PROSPE (conta de anúncios 02), escolhido pelo Victor em 22/11
+  PIXEL_ID: "1151759374007346", // PIXEL MÃE: o mesmo das campanhas da conta IU 1 e da Cakto (troca pedida pelo Victor em 22/11, 17h); antes era o PROSPE 28165559309792835
 
   // UTMify: o valor de window.pixelId que aparece no código do pixel do UTMify.
   UTMIFY_PIXEL_ID: "6b033c548d2ea0bfb5315503", // pixel da UTMify (22/11)
