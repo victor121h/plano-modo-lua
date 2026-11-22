@@ -96,24 +96,17 @@
         <ul>
           <li><span class="ic" aria-hidden="true">🧒</span><span><strong>Idade:</strong> <span id="res-idade"></span></span></li>
           <li><span class="ic" aria-hidden="true">☀️</span><span>Acorda por volta das <strong id="res-acorda"></strong></span></li>
-          <li><span class="ic" aria-hidden="true">🌙</span><span class="janela"><span>Horário da Lua</span><b>luz apagada entre <span id="res-janela-ini"></span> e <span id="res-janela-fim"></span></b></span></li>
           <li><span class="ic" aria-hidden="true">⏰</span><span><strong>Hoje:</strong> pega no sono por volta das <strong id="res-dorme"></strong>. <span id="res-diferenca"></span></span></li>
+          <li><span class="ic" aria-hidden="true">🌙</span><span class="janela janela--trancada"><span>O Horário da Lua dela (luz apagada)</span><b><span class="cadeado" aria-hidden="true">🔒</span> <span class="borrao" aria-hidden="true">00h00 e 00h00</span><span class="so-leitor">trancado</span></b><small>Liberado no Plano Modo Lua, logo depois da compra.</small></span></li>
           <li><span class="ic" aria-hidden="true">📍</span><span><strong id="res-ponto-titulo">O seu ponto de partida:</strong><span class="pontos" id="res-pontos"></span></span></li>
         </ul>
         <p class="aviso-idade" id="res-aviso-idade" hidden></p>
-        <div class="mapa-acoes">
-          <button class="btn-salvar" id="btn-salvar" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-            Salvar meu resultado
-          </button>
-        </div>
-        <p class="fonte-calculo">Estimativa feita com a tabela de horas de sono da Sociedade Brasileira de Pediatria. Não é avaliação médica.</p>
+        <p class="fonte-calculo">O Horário da Lua é calculado pela idade e pela hora em que ela acorda, com a tabela de horas de sono da Sociedade Brasileira de Pediatria. Não é avaliação médica.</p>
       </div>
 
       <p class="vsl-intro">Assista: a Helena explica o seu Horário da Lua</p>
       <div class="midia vsl" id="vsl" data-ph="Vídeo da Helena">
         <video id="vsl-video" playsinline webkit-playsinline muted loop preload="none" aria-label="Vídeo da Helena sobre o Horário da Lua e o Plano Modo Lua"></video>
-        <span class="vsl-rotulo">Apresentadora criada com IA</span>
         <button class="vsl-toque" id="vsl-toque" type="button" aria-label="Pausar o vídeo" hidden>
           <span class="icone-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
         </button>
@@ -146,6 +139,7 @@
           <h2>O que você recebe</h2>
           <ul class="lista-check">
             <li><strong>Guia Modo Lua:</strong> entenda o segundo gás e os 3 passos (Hora, Luz e Pouso), num texto curto e simples.</li>
+            <li><strong>O Horário da Lua dela, destrancado:</strong> a janela de luz apagada que ficou trancada no seu teste aparece logo depois da compra.</li>
             <li><strong>Horário da Lua por idade:</strong> quadros prontos para 1 a 2, 2 a 3 e 3 a 5 anos, com 5 horários de acordar (de 6h a 8h): soneca, início do ritual e luz apagada. E a regra dos 15 minutos para adiantar aos poucos.</li>
             <li><strong>Ritual de 20 a 30 minutos</strong> para cada idade, com cartão para imprimir e colar na porta do quarto e uma versão para o celular.</li>
             <li><strong>Pouso em 4 degraus:</strong> 14 noites para você sair do quarto aos poucos, e o que fazer se ela protestar, sem deixar chorar sozinha.</li>

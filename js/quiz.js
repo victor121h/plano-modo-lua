@@ -212,14 +212,15 @@
   }
 
   function explicacao(p, c) {
-    if (p === 'hora') return 'adiante 15 minutos a cada 2 ou 3 noites: são ' + c.ajustes + ' ajustes até a janela.';
+    if (p === 'hora') return 'adiantar a hora de deitar 15 minutos a cada 2 ou 3 noites, até chegar no Horário da Lua dela.';
     if (p === 'luz') return 'telas desligadas 1 hora antes, casa em meia-luz e um ritual de 20 a 30 minutos, sempre na mesma ordem.';
     return 'ela pega no sono na caminha dela, com você perto, e você vai saindo em 4 degraus, sem deixar chorar sozinha.';
   }
   function fraseDiferenca(c) {
-    return c.dif > 0
-      ? 'Hoje ela pega no sono cerca de ' + duracao(c.dif) + ' depois do Horário da Lua: é a zona do segundo gás.'
-      : 'O horário já está perto do relógio dela.';
+    /* Sem minutos: com a diferença e a hora de hoje daria para deduzir o horário, que fica trancado (só no Plano). */
+    if (c.dif > 30) return 'Ela está pegando no sono depois do Horário da Lua da idade dela: é a zona do segundo gás.';
+    if (c.dif > 0) return 'Ela está pegando no sono um pouco depois do Horário da Lua da idade dela.';
+    return 'O horário dela já está perto do Horário da Lua. O que muda a noite está no ponto de partida abaixo.';
   }
 
   /* ---------- Navegação ---------- */
@@ -498,7 +499,7 @@
   }
   function avisoIdade(idade) {
     if (idade === 'Mais de 5 anos') return 'O plano foi feito até 5 anos; para crianças maiores, use os passos 2 e 3.';
-    if (idade === 'Menos de 1 ano') return 'O Plano Modo Lua é para crianças de 1 a 5 anos. Antes de 1 ano, as mamadas da noite podem ser normais e o mais importante é o sono seguro: converse com o pediatra. O horário acima é o da faixa de 1 a 2 anos, só como referência para depois do primeiro aniversário.';
+    if (idade === 'Menos de 1 ano') return 'O Plano Modo Lua é para crianças de 1 a 5 anos. Antes de 1 ano, as mamadas da noite podem ser normais e o mais importante é o sono seguro: converse com o pediatra. No plano, o Horário da Lua usa a faixa de 1 a 2 anos, como referência para depois do primeiro aniversário.';
     return '';
   }
 
@@ -511,8 +512,6 @@
       : 'O seu Horário da Lua está pronto';
     $('res-idade').textContent = textoIdade(r.idade);
     $('res-acorda').textContent = hora(c.acorda);
-    $('res-janela-ini').textContent = hora(c.ini);
-    $('res-janela-fim').textContent = hora(c.fim);
     $('res-dorme').textContent = hora(c.dorme);
     $('res-diferenca').textContent = fraseDiferenca(c);
 
@@ -650,7 +649,8 @@
   }
 
   var urlImagem = null;
-  $('btn-salvar').addEventListener('click', function () {
+  /* O botão "Salvar meu resultado" saiu da página (a imagem mostrava o horário, que agora fica trancado). */
+  if ($('btn-salvar')) $('btn-salvar').addEventListener('click', function () {
     var fontes = [];
     try {
       if (document.fonts && document.fonts.load) {

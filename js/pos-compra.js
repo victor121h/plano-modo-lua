@@ -123,7 +123,7 @@
       var c = q && q.calc;
       if (c && typeof c.ini === 'number' && typeof c.fim === 'number' && Array.isArray(c.pontos) && c.pontos.length) {
         var ponto = NOMES[c.pontos[0]] || 'Hora da Lua';
-        dica.textContent = 'Pelo seu teste, comece pela ' + ponto + '. O Horário da Lua deu luz apagada entre ' + hora(c.ini) + ' e ' + hora(c.fim) + '.';
+        dica.textContent = 'O Horário da Lua dela, que ficou trancado no teste: luz apagada entre ' + hora(c.ini) + ' e ' + hora(c.fim) + '. Hoje à noite, comece pela ' + ponto + '.';
       }
     } catch (e) { /* sem quiz salvo: fica o texto padrão */ }
   }

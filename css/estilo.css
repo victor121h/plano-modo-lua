@@ -721,3 +721,9 @@ html.fundo-noite .rodape a, html.fundo-noite .rodape .cvv { color: var(--creme);
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Horário trancado no resultado: o teste é grátis, o horário vem no Plano (decisão do Victor, 22/11) */
+.mapa .janela--trancada b { display: flex; align-items: center; gap: 8px; }
+.mapa .janela--trancada .borrao { filter: blur(7px); user-select: none; -webkit-user-select: none; }
+.mapa .janela--trancada small { display: block; margin-top: 4px; font-size: 13.5px; color: var(--creme); opacity: .85; }
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
