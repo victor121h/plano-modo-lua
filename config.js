@@ -18,7 +18,7 @@ window.CONFIG = {
   CHECKOUT_URL: "https://pay.cakto.com.br/7p4coem_1356837",
 
   // Endereço publicado do site (GitHub Pages). As URLs dos upsells são montadas a partir dele.
-  SITE_URL: "https://victor121h.github.io/plano-modo-lua",
+  SITE_URL: "https://plano-modo-lua.replit.app",
 
   // Fim do funil (último upsell/downsell).
   // "members_area" = valor especial da Cakto: o botão leva a pessoa direto para a área de membros
