@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Modo Lua Sob Medida · Plano Modo Lua</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#FBF6EC">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..700,100&family=Figtree:wght@400..800&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>cakto-upsell-accept:not(:defined), cakto-upsell-reject:not(:defined) { visibility: hidden; }</style>
+
+  <!-- UTMify: UTMs -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+  <script src="config.js" defer></script>
+  <script src="js/rastreio.js" defer></script>
+  <script src="js/pos-compra.js" defer></script>
+</head>
+<body data-pagina="upsell-1">
+  <main class="pagina">
+    <div class="topo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Seu Plano Modo Lua está garantido</div>
+    <section class="upsell">
+      <p class="etapa-up">Etapa 1 de 3</p>
+      <h1>Falta um passo</h1>
+      <p class="lead">O Plano já tem o horário pela faixa de idade. O Sob Medida calcula o da sua casa, com creche, soneca e o horário em que vocês chegam, e te diz o ajuste de cada semana.</p>
+
+      <!-- Vídeo curto da Helena: aparece quando video/up1.mp4 existir e VIDEOS_UPSELL_PRONTOS = true no js/pos-compra.js -->
+      <div class="midia up-video" data-video="video/up1.mp4" data-poster="img/helena-poster.jpg" hidden><span class="vsl-rotulo">Apresentadora criada com IA</span></div>
+
+      <div class="midia midia--quadrada midia--contain" data-ph="img/up1.png">
+        <img src="img/up1.png" alt="Modo Lua Sob Medida: o quadro de horários da sua casa, 21 noites guiadas e o diário de 21 noites" width="1080" height="1080" decoding="async" onerror="this.remove()">
+      </div>
+
+      <h2 class="produto-nome">Modo Lua Sob Medida</h2>
+      <p class="produto-desc">O Modo Lua encaixado na rotina real da sua casa: a creche, a soneca, a hora em que os adultos chegam e o ajuste certo a cada semana.</p>
+
+      <ul class="lista-check">
+          <li><strong>Meu Quadro Sob Medida:</strong> 7 perguntas simples (a hora em que ela acorda, a creche ou a escola, a soneca, a hora em que vocês chegam) levam ao quadro de horários da sua casa, com a tabela-mestra e a calculadora de papel.</li>
+          <li><strong>4 cenários e os ajustes da sua rotina:</strong> em casa, creche de manhã, integral ou escola à tarde; adultos que chegam tarde, dias diferentes e irmãos.</li>
+          <li><strong>21 noites guiadas:</strong> uma leitura de uns 3 minutos por noite, com o que fazer hoje à noite. Dá para ler no celular enquanto a banheira enche.</li>
+          <li><strong>Diário de 21 noites e Guia do Ajuste da Semana:</strong> mostra se é hora de adiantar 15 minutos, mudar a soneca, subir ou voltar um degrau do pouso.</li>
+      </ul>
+
+      <div class="preco-up">
+        <div class="valor"><small>R$</small>67</div>
+        <p class="condicao">Pagamento único · Garantia de 7 dias</p>
+      </div>
+
+      <!-- Botão de um clique da Cakto: montado pelo js/pos-compra.js com o offer-id "up1" do config.js.
+           Aceitar → upsell-2.html · Recusar → downsell-1.html
+           ("fim" = fim do funil: "members_area" da Cakto ou obrigado.html, conforme o AREA_MEMBROS_URL do config.js) -->
+      <div class="cakto-area" id="cakto-area"
+           data-oferta="up1" data-tipo="upsell"
+           data-aceitar="upsell-2.html" data-recusar="downsell-1.html"
+           data-texto-sim="Sim, quero adicionar por R$ 67"></div>
+
+      <p class="nota-up">Se preferir não levar, toque em “Não, obrigada”. Seu Plano Modo Lua continua garantido e o acesso chega no seu <span class="sem-quebra">e-mail</span>.</p>
+    </section>
+
+    <footer class="rodape">
+      <p>A Helena, apresentadora do vídeo, é uma personagem criada com inteligência artificial. O conteúdo do Plano Modo Lua foi montado a partir de orientações públicas da Sociedade Brasileira de Pediatria (Higiene do Sono, 2021), da Academia Americana de Pediatria e do CDC, sem vínculo com essas instituições. Não substitui o acompanhamento do pediatra.</p>
+      <p>Fontes públicas: Sociedade Brasileira de Pediatria, Departamento Científico do Sono (Higiene do Sono: Atualização 2021), orientações de sono seguro (2023) e #MenosTelas #MaisSaúde (2024) · Academia Americana de Pediatria, HealthyChildren.org (“Bedtime Trouble”, “Brush, Book, Bed” e horas de sono por idade, consenso da Academia Americana de Medicina do Sono endossado pela AAP) · CDC (rotinas para crianças pequenas).</p>
+      <p class="cvv">Se você sente que está no seu limite, você pode conversar com o CVV pelo <a href="tel:188">188</a>, de graça, 24 horas.</p>
+      <p data-suporte-linha>Suporte: <a data-suporte-email href="#">e-mail de suporte</a></p>
+      <p>© 2026 Plano Modo Lua · Pagamento processado pela Cakto.</p>
+    </footer>
+  </main>
+</body>
+</html>

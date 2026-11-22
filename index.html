@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR" class="fundo-noite">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Horário da Lua · Teste gratuito</title>
+  <meta name="description" content="Teste gratuito de 2 minutos: descubra a hora certa de dormir para a idade do seu filho e por onde começar hoje à noite.">
+  <meta name="theme-color" content="#1F2A44">
+  <meta property="og:title" content="Horário da Lua · Teste gratuito">
+  <meta property="og:description" content="Descubra a hora certa de dormir para a idade do seu filho e por onde começar hoje à noite.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="img/capa.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..700,100&family=Figtree:wght@400..800&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+
+  <!-- Quem recarrega no meio do quiz volta para a tela onde parou (sem piscar a capa) -->
+  <style>.restaurando #tela-capa { visibility: hidden; }</style>
+  <script>
+    try {
+      var s = JSON.parse(localStorage.getItem('modolua_quiz_v1') || 'null');
+      if (s && s.tela > 0) {
+        document.documentElement.className = 'restaurando';
+        setTimeout(function () { document.documentElement.classList.remove('restaurando'); }, 3000);
+      }
+    } catch (e) {}
+  </script>
+
+  <!-- UTMify: UTMs -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+  <script src="config.js" defer></script>
+  <script src="js/rastreio.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+<body>
+  <main class="pagina">
+
+    <!-- ===================== ETAPA 1 · CAPA ===================== -->
+    <section id="tela-capa" class="capa" aria-labelledby="capa-titulo">
+      <div class="ceu" aria-hidden="true">
+        <svg class="lua" style="right:4px;top:12px" width="46" height="46" viewBox="0 0 64 64"><defs><mask id="mk-lua-capa"><rect width="64" height="64" fill="#fff"/><circle cx="44" cy="22" r="21" fill="#000"/></mask></defs><circle cx="30" cy="34" r="25" fill="currentColor" mask="url(#mk-lua-capa)"/></svg>
+        <svg class="estrela" style="right:66px;top:22px" width="10" height="10" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrela" style="right:120px;top:4px" width="7" height="7" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrela" style="left:66%;top:34px" width="6" height="6" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrela" style="right:56px;top:44px" width="8" height="8" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrela" style="left:44%;top:0" width="9" height="9" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrela" style="right:150px;top:36px" width="6" height="6" viewBox="0 0 24 24"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+      </div>
+      <span class="selo">Teste gratuito · 2 minutos</span>
+      <h1 id="capa-titulo">Descubra o <span class="destaque">Horário da Lua</span> do seu filho: a hora certa de dormir para a idade dele</h1>
+      <p class="subtitulo">Responda 15 perguntas rápidas e veja se a criança está indo para a cama depois do <strong>segundo gás</strong>, e por onde começar hoje à noite.</p>
+      <div class="midia capa-midia">
+        <img src="img/capa.jpg" alt="Helena, a apresentadora, num quarto infantil à meia-luz com um abajur de lua aceso" width="880" height="1100" fetchpriority="high" decoding="async" onerror="this.remove()">
+        <span class="rotulo-ia">Imagem criada com IA</span>
+      </div>
+      <button id="btn-comecar" class="btn btn--pulso" type="button">DESCOBRIR O HORÁRIO DA LUA</button>
+      <p class="nota">Para mães e pais de crianças de 1 a 5 anos. O teste é gratuito; no final você pode, se quiser, levar o Plano Modo Lua completo.</p>
+    </section>
+
+    <!-- ===================== PERGUNTAS (montadas pelo js/quiz.js) ===================== -->
+    <section id="tela-quiz" class="quiz" hidden>
+      <div class="quiz-topo">
+        <button class="voltar" id="btn-voltar" type="button" aria-label="Voltar para a tela anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="progresso" role="progressbar" aria-label="Progresso do teste" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="progresso-barra"></span>
+        </div>
+      </div>
+      <div class="quiz-conteudo" id="quiz-conteudo"></div>
+    </section>
+
+    <!-- ===================== CARREGAMENTO ===================== -->
+    <section id="tela-carregando" class="carregando" hidden aria-live="polite">
+      <svg class="lua-carregando" viewBox="0 0 64 64" aria-hidden="true"><defs><mask id="mk-lua-carregando"><rect width="64" height="64" fill="#fff"/><circle cx="44" cy="22" r="21" fill="#000"/></mask></defs><circle cx="30" cy="34" r="25" fill="currentColor" mask="url(#mk-lua-carregando)"/></svg>
+      <ul class="passos-carregando">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Calculando o horário pela idade...</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Conferindo o segundo gás...</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Montando o seu Plano Modo Lua...</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== RESULTADO + MINI VSL + OFERTA ===================== -->
+    <section id="tela-resultado" class="resultado" hidden>
+      <h1 id="res-titulo" tabindex="-1">O seu Horário da Lua está pronto</h1>
+
+      <div class="mapa" id="res-cartao">
+        <svg class="estrelinha" style="right:16px;top:14px" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <svg class="estrelinha" style="right:38px;top:34px" width="7" height="7" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.7 6.3 3.7 9.3 10 10-6.3.7-9.3 3.7-10 10-.7-6.3-3.7-9.3-10-10 6.3-.7 9.3-3.7 10-10z" fill="currentColor"/></svg>
+        <h2>O que o seu resultado mostra</h2>
+        <ul>
+          <li><span class="ic" aria-hidden="true">🧒</span><span><strong>Idade:</strong> <span id="res-idade"></span></span></li>
+          <li><span class="ic" aria-hidden="true">☀️</span><span>Acorda por volta das <strong id="res-acorda"></strong></span></li>
+          <li><span class="ic" aria-hidden="true">🌙</span><span class="janela"><span>Horário da Lua</span><b>luz apagada entre <span id="res-janela-ini"></span> e <span id="res-janela-fim"></span></b></span></li>
+          <li><span class="ic" aria-hidden="true">⏰</span><span><strong>Hoje:</strong> pega no sono por volta das <strong id="res-dorme"></strong>. <span id="res-diferenca"></span></span></li>
+          <li><span class="ic" aria-hidden="true">📍</span><span><strong id="res-ponto-titulo">O seu ponto de partida:</strong><span class="pontos" id="res-pontos"></span></span></li>
+        </ul>
+        <p class="aviso-idade" id="res-aviso-idade" hidden></p>
+        <div class="mapa-acoes">
+          <button class="btn-salvar" id="btn-salvar" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            Salvar meu resultado
+          </button>
+        </div>
+        <p class="fonte-calculo">Estimativa feita com a tabela de horas de sono da Sociedade Brasileira de Pediatria. Não é avaliação médica.</p>
+      </div>
+
+      <p class="vsl-intro">Assista: a Helena explica o seu Horário da Lua</p>
+      <div class="midia vsl" id="vsl" data-ph="Vídeo da Helena">
+        <video id="vsl-video" playsinline webkit-playsinline muted loop preload="none" aria-label="Vídeo da Helena sobre o Horário da Lua e o Plano Modo Lua"></video>
+        <span class="vsl-rotulo">Apresentadora criada com IA</span>
+        <button class="vsl-toque" id="vsl-toque" type="button" aria-label="Pausar o vídeo" hidden>
+          <span class="icone-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        </button>
+        <button class="vsl-som" id="vsl-som" type="button"><span><span aria-hidden="true">🔊</span> Toque para ouvir</span></button>
+        <div class="vsl-barra" id="vsl-barra" hidden><span id="vsl-progresso"></span></div>
+        <p class="vsl-aviso" id="vsl-erro" hidden>O vídeo não carregou agora. A oferta já está logo abaixo.</p>
+      </div>
+
+      <div class="ler-oferta" id="ler-oferta">
+        <button class="link-discreto" id="btn-ler-oferta" type="button">Prefere ler? Ver a oferta agora</button>
+      </div>
+
+      <!-- Oferta: abre aos 153 s de vídeo com som, 180 s depois do resultado ou pelo link acima -->
+      <div id="oferta" hidden>
+        <div class="caixa-preco" id="oferta-topo">
+          <h2 class="so-leitor">Oferta</h2>
+          <div class="valor"><small>R$</small>27</div>
+          <p class="condicao">Pagamento único · Pix ou cartão</p>
+          <a class="btn btn--pulso" data-checkout href="#"><span>QUERO MEU PLANO <span class="sem-quebra">MODO LUA</span></span></a>
+          <p class="miudo">Acesso no seu e-mail logo após o pagamento · Garantia de 7 dias</p>
+        </div>
+
+        <div class="midia midia--quadrada midia--contain oferta-mockup" data-ph="img/mockup.png">
+          <img src="img/mockup.png" alt="Plano Modo Lua no celular e o cartão do ritual colado na porta do quarto" width="1080" height="1080" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <h2 class="oferta-titulo">Plano Modo Lua</h2>
+        <p class="oferta-sub">O horário certo de dormir para a idade da criança, um ritual de 20 a 30 minutos e a saída do quarto em 4 degraus, para a hora de dormir ficar mais curta e mais calma, sem deixar chorar sozinha.</p>
+
+        <section class="secao">
+          <h2>O que você recebe</h2>
+          <ul class="lista-check">
+            <li><strong>Guia Modo Lua:</strong> entenda o segundo gás e os 3 passos (Hora, Luz e Pouso), num texto curto e simples.</li>
+            <li><strong>Horário da Lua por idade:</strong> quadros prontos para 1 a 2, 2 a 3 e 3 a 5 anos, com 5 horários de acordar (de 6h a 8h): soneca, início do ritual e luz apagada. E a regra dos 15 minutos para adiantar aos poucos.</li>
+            <li><strong>Ritual de 20 a 30 minutos</strong> para cada idade, com cartão para imprimir e colar na porta do quarto e uma versão para o celular.</li>
+            <li><strong>Pouso em 4 degraus:</strong> 14 noites para você sair do quarto aos poucos, e o que fazer se ela protestar, sem deixar chorar sozinha.</li>
+            <li><strong>Plano da Madrugada:</strong> a resposta curta e sempre igual, com pouca luz e pouca conversa, e como levar a criança de volta para a cama dela.</li>
+            <li><strong>Checklist Antes do Pedido:</strong> água, xixi, naninha, luz, porta e “mais uma história” resolvidos antes de apagar a luz.</li>
+            <li><strong>Diário da Lua de 14 noites:</strong> para imprimir ou usar no celular e ver, noite a noite, o que está mudando.</li>
+            <li><strong>Sono seguro e quando procurar o pediatra:</strong> o básico do sono seguro no primeiro ano e os sinais de que vale conversar com o pediatra.</li>
+          </ul>
+        </section>
+
+        <section class="secao">
+          <h2>Como funciona: Modo Lua em 3 passos (Hora, Luz e Pouso)</h2>
+          <div class="passos3">
+            <div class="passo3"><h3>Hora da Lua</h3><p>Deitar antes do segundo gás: o horário pela idade, contando de trás para frente a partir da hora em que ela acorda. Se hoje é muito tarde, adiante 15 minutos a cada 2 ou 3 noites.</p></div>
+            <div class="passo3"><h3>Luz da Lua</h3><p>1 hora antes, telas desligadas e casa em meia-luz. Depois, um ritual de 20 a 30 minutos, sempre na mesma ordem: banho, pijama, dentes, história e boa-noite.</p></div>
+            <div class="passo3"><h3>Pouso da Lua</h3><p>Ela pega no sono na caminha dela, com você perto. E você vai saindo em 4 degraus: deitada junto, sentada ao lado, cadeira na porta, fora do quarto.</p></div>
+          </div>
+        </section>
+
+        <section class="secao">
+          <h2>Para quem é (e para quem não é)</h2>
+          <div class="dupla">
+            <div class="cartao cartao--sim"><h3>Para quem é</h3><p>Mães e pais de crianças de 1 a 5 anos em que a hora de dormir virou uma luta.</p></div>
+            <div class="cartao cartao--nao"><h3>Para quem não é</h3>
+              <ul>
+                <li>Não é tratamento.</li>
+                <li>Não é para bebê de menos de 1 ano.</li>
+                <li>Não usa remédio, chá, melatonina nem suplemento.</li>
+                <li>Não deixa a criança chorando sozinha.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cartao cartao--pediatra">
+            <h3>Quando falar com o pediatra antes</h3>
+            <ul>
+              <li>Ronco com pausas na respiração.</li>
+              <li>Respiração difícil ou pela boca toda noite.</li>
+              <li>Sono muito agitado.</li>
+              <li>Mudança brusca no sono.</li>
+              <li>Criança que não ganha peso.</li>
+              <li>Qualquer dúvida sobre o desenvolvimento.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="secao">
+          <h2>Por que é tão barato?</h2>
+          <p>Porque é digital e porque toda mãe cansada merece isso sem pagar um curso caro.</p>
+        </section>
+
+        <div class="caixa-preco">
+          <p><strong>Plano Modo Lua completo</strong></p>
+          <div class="valor"><small>R$</small>27</div>
+          <p class="condicao">Pagamento único · Pix ou cartão</p>
+          <a class="btn" data-checkout href="#"><span>QUERO MEU PLANO <span class="sem-quebra">MODO LUA</span></span></a>
+          <p class="miudo">Sem mensalidade e sem cobrança escondida: o valor do checkout é este + a taxa de serviço da plataforma.</p>
+        </div>
+
+        <div class="garantia">
+          <div class="selo-7" aria-hidden="true"><b>7</b><span>DIAS</span></div>
+          <p><strong>Garantia de 7 dias.</strong> Se não gostar, é só pedir o reembolso dentro desse prazo e você recebe o valor de volta.</p>
+        </div>
+
+        <section class="secao">
+          <h2>Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Como eu recebo?</summary>
+              <p>Assim que o pagamento é aprovado, o acesso chega no e-mail que você usar na compra. Quem envia é a Cakto, a plataforma de pagamento. No cartão é na hora; no Pix, logo depois da confirmação. Dá para abrir tudo no celular.</p>
+            </details>
+            <details>
+              <summary>Serve para qual idade?</summary>
+              <p>Para crianças de 1 a 5 anos. Os quadros de horário vêm em 3 faixas: 1 a 2, 2 a 3 e 3 a 5 anos. Antes de 1 ano, o mais importante é o sono seguro e a conversa com o pediatra.</p>
+            </details>
+            <details>
+              <summary>Precisa deixar chorar?</summary>
+              <p>Não. O Modo Lua não deixa a criança chorando sozinha. Se ela protestar, você fica perto, com a mesma frase e a voz baixa, e vai saindo do quarto aos poucos.</p>
+            </details>
+            <details>
+              <summary>E se ela mama de madrugada?</summary>
+              <p>O plano funciona com ou sem peito. Tirar a mamada da noite é uma conversa com o pediatra.</p>
+            </details>
+            <details>
+              <summary>Em quanto tempo funciona?</summary>
+              <p>Cada criança tem o seu tempo. O plano te mostra o que fazer a cada noite, e o diário mostra o que está mudando.</p>
+            </details>
+            <details>
+              <summary>É assinatura?</summary>
+              <p data-faq-preco>Não. É um pagamento único de R$ 27, sem mensalidade.</p>
+            </details>
+            <details>
+              <summary>E se eu não gostar?</summary>
+              <p>Você tem 7 dias de garantia. Se não gostar, pede o reembolso dentro desse prazo e recebe o valor de volta.</p>
+            </details>
+          </div>
+        </section>
+
+        <div class="caixa-preco">
+          <div class="valor"><small>R$</small>27</div>
+          <p class="condicao">Pagamento único · Pix ou cartão</p>
+          <a class="btn" data-checkout href="#"><span>QUERO MEU PLANO <span class="sem-quebra">MODO LUA</span></span></a>
+        </div>
+      </div>
+
+      <p class="ler-oferta"><button class="link-discreto" id="btn-refazer" type="button">Refazer o teste</button></p>
+    </section>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer class="rodape">
+      <p>A Helena, apresentadora do vídeo, é uma personagem criada com inteligência artificial. O conteúdo do Plano Modo Lua foi montado a partir de orientações públicas da Sociedade Brasileira de Pediatria (Higiene do Sono, 2021), da Academia Americana de Pediatria e do CDC, sem vínculo com essas instituições. Não substitui o acompanhamento do pediatra.</p>
+      <p>Fontes públicas: Sociedade Brasileira de Pediatria, Departamento Científico do Sono (Higiene do Sono: Atualização 2021), orientações de sono seguro (2023) e #MenosTelas #MaisSaúde (2024) · Academia Americana de Pediatria, HealthyChildren.org (“Bedtime Trouble”, “Brush, Book, Bed” e horas de sono por idade, consenso da Academia Americana de Medicina do Sono endossado pela AAP) · CDC (rotinas para crianças pequenas).</p>
+      <p class="cvv">Se você sente que está no seu limite, você pode conversar com o CVV pelo <a href="tel:188">188</a>, de graça, 24 horas.</p>
+      <p data-suporte-linha>Suporte: <a data-suporte-email href="#">e-mail de suporte</a></p>
+      <p>© 2026 Plano Modo Lua · Pagamento processado pela Cakto.</p>
+    </footer>
+  </main>
+</body>
+</html>
