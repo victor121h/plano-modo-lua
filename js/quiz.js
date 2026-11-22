@@ -12,7 +12,7 @@
   };
   var CHAVE = 'modolua_quiz_v1';
 
-  /* Tempos da oferta. Narração (audio/mini-vsl-helena.mp3): 211 s (3:31).
+  /* Tempos da oferta. Vídeo editado (video/vsl.mp4): 213,6 s (3:33). Conferido pela transcrição.
      A Helena começa a oferta ("Você recebe o plano no celular") aos 153 s
      e fala o preço por volta dos 185 s. Abre o que vier primeiro. */
   var OFERTA_NO_VIDEO_S = 153;   // segundos de vídeo assistido COM SOM
